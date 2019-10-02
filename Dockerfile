@@ -14,7 +14,8 @@ RUN apt-get install language-pack-en -y
 RUN export LC_ALL=en_GB.UTF-8
 RUN export LANG=en_GB.UTF-8
 RUN LC_ALL=en_GB.UTF-8 LANG=en_GB.UTF-8 add-apt-repository -y -u ppa:ondrej/php
-RUN apt-get install php7.1 php7.1-cli php7.1-xml php7.1-curl php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm -y
+RUN apt-get clean && apt-get update
+RUN apt-get install php7.1 php7.1-cli php7.1-xml php7.1-dom php7.1-curl php7.1-common php7.1-json php7.1-opcache php7.1-mysql php7.1-mbstring php7.1-mcrypt php7.1-zip php7.1-fpm -y
 
 RUN service php7.0-fpm stop
 RUN service php7.1-fpm start
