@@ -21,10 +21,10 @@ RUN service php7.0-fpm stop
 RUN service php7.1-fpm start
 RUN service nginx restart
 
-RUN echo "#Install ES 7.3"
+#RUN echo "#Install ES 7.3"
 
-FROM elasticsearch:7.3.0
-RUN chown -R :elasticsearch /usr/share/elasticsearch/data
-ENV discovery.type single-node
-EXPOSE 9200
+#FROM elasticsearch:7.3.0
+#RUN chown -R :elasticsearch /usr/share/elasticsearch/data
+#ENV discovery.type single-node
+#EXPOSE 9200
 
